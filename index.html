@@ -1,0 +1,681 @@
+<title>Kata Rasa</title>
+
+<head>
+<script src="src/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+
+<div class="ui sidebar vertical menu" id="side3">
+<div class="ui item">
+<a href="#home" style="color: #000;" onclick="home8()">Mr. KataRasa</a>
+</div>
+
+<a href="#home" class="active item" id="home9" onclick="home8()">Beranda</a>
+
+<a href="#flavours" class="item" id="flavours9" onclick="flavours8()">Rasa-Rasa</a>
+
+<a href="#jokes" class="item" id="jokes9" onclick="jokes8()">Kalimat Bijak</a>
+
+<a href="#comments" class="item" id="comments9" onclick="comments8()">Kesan Pesan</a>
+
+<a href="#gallery" class="item" id="gallery9" onclick="gallery8()">Galeri</a>
+
+<a href="#feedback" class="item" id="feedback9" onclick="feedback8()">Umpan Balik</a>
+
+<a href="#buy" class="item" id="buy9" onclick="buy8()">Beli Sekarang</a>
+
+<a href="#developer" id="developer9" onclick="developer8()" class="item">Developer Options</a>
+</div>
+
+<div class="pusher">
+<div class="ui fixed secondary menu pointing">
+<button class="ui icon button" id="side2" onclick="side_visible()"><i class="ellipsis vertical icon"></i></button>
+
+<div class="ui item">
+<a href="#home" style="color: #000;" onclick="home1()" id="home1000">Mr. KataRasa</a>
+</div>
+
+<div class="right menu">
+<div class="ui item">
+<a href="home" onclick="home1()" id="home3" style="color: #000;">Mr. KataRasa</a>
+</div>
+
+<button class="ui icon button" id="side_hide" onclick="side_hidden()"><i class="ellipsis vertical icon"></i></button>
+
+<a href="#home" class="active item" id="home2" onclick="home1()">Beranda</a>
+
+<a href="#flavours" class="item" id="flavours2" onclick="flavours1()">Rasa-Rasa</a>
+
+<a href="#jokes" class="item" id="jokes2" onclick="jokes1()">Kalimat Bijak</a>
+
+<a href="#comments" class="item" id="comments2" onclick="comments1()">Kesan Pesan</a>
+
+<a href="#gallery" class="item" id="gallery2" onclick="gallery1()">Galeri</a>
+
+<a href="#feedback" class="item" id="feedback2" onclick="feedback1()">Umpan Balik</a>
+
+<a href="#buy" class="item" id="buy2" onclick="buy1()">Beli Sekarang</a>
+
+<a href="#developer" id="developer2" onclick="developer1()" class="item">Developer Options</a>
+
+<button class="ui button icon" id="modal2"><i class="ellipsis vertical icon"></i></button>
+</div>
+</div><br><br><br><br>
+
+<div id="home">
+<h1 class="ui header center aligned">Kata Rasa Indonesia</h1>
+<p class="ui header center aligned">Lorem ipsum dolor sit amet.</p>
+<button class="ui button primary" onclick="buy()" style="display: block; margin-left: auto; margin-right: auto;">Beli Sekarang</button>
+
+<i class="down arrow icon" style="margin-top: 500px; display: block; margin-left: auto; margin-right: auto;"></i>
+</div>
+
+<div id="flavours" style="margin-top: 44px; padding-top: 500px;">
+<h1 class="ui header center aligned">Rasa-Rasa</h1>
+
+<div class="ui container segment"><h2 class="ui header">Sambalado</h2>
+<p>Rasanya pedas, ada jeruk-jeruknya gitu.</p>
+</div>
+
+<div class="ui container segment"><h2 class="ui header">Original</h2>
+<p>Gurih, dan garing, sedikit asin.</p>
+</div>
+
+<div class="ui container segment"><h2 class="ui header">Keju</h2>
+<p>Manis-manis, sedikit asin.</p>
+</div>
+
+<h1 class="ui header center aligned">Coming Soon</h1>
+
+<div class="ui container segment">
+<h2 class="ui header">Pedas Banget</h2>
+<p>Ditunggu ya, para penggemar Kata Rasa</p>
+</div>
+
+<div class="ui container segment">
+<h2 class="ui header">Pedas Sedang</h2>
+<p>Ditunggu ya, para penggemar Kata Rasa</p>
+</div>
+
+<div class="ui container segment">
+<h2 class="ui header">Pedas</h2>
+<p>Ditunggu ya, para penggemar Kata Rasa</p>
+</div>
+</div>
+
+<div id="jokes" style="margin-top: 44px;">
+<h1 class="ui header center aligned">Kalimat Bijak</h1>
+
+<div class="ui container segment">
+<p>Jangan takut gendut<br>
+Tambah gendut, tambah berat.<br>
+tambah susah diculik.<br>
+Biar aman ngemil aja yang banyak</p>
+</div>
+</div>
+
+<div id="comments" style="margin-top: 44px;">
+<h1 class="ui header center aligned">Kesan Pesan</h1>
+
+<div class="ui container segment">
+<h2 class="ui header">Syana Deng</h2>
+<p>5/5</p>
+<p>Keripiknya enak</p>
+</div>
+
+<div class="ui container segment">
+<h2 class="ui header">Resya Deng</h2>
+<p>5/5</p>
+<p>Pedesnya mantep!</p>
+</div>
+
+
+<div class="ui container segment">
+<h2 class="ui header">Teng Herry</h2>
+<p>5/5</p>
+<p>Asinnya pas!</p>
+</div>
+</div><br>
+
+<div id="gallery" style="margin-top: 44px;">
+<h1 class="ui header center aligned">Galeri</h1>
+
+<div class="ui container segment">
+<h2 class="ui header center aligned">Original</h2>
+</div>
+
+<img src="original1.jpg" class="ui image centered rounded medium"></img><br>
+<img src="original2.jpg" class="ui image centered rounded medium"></img><br>
+<img src="original3.jpg" class="ui image centered rounded medium"></img><br>
+
+<div class="ui container segment">
+<h2 class="ui header center aligned">Sambalado</h2>
+</div>
+<img src="balado1.jpeg" class="ui image centered rounded medium"></img><br>
+<img src="balado2.jpeg" class="ui image centered rounded medium"></img><br>
+<img src="balado3.jpeg" class="ui image centered rounded medium"></img><br>
+</div>
+
+<div id="feedback" style="margin-top: 44px;">
+<h1 class="ui header center aligned">Umpan Balik</h1>
+
+<div class="ui input labeled fluid">
+<div class="ui label">
+Nama
+</div>
+<input type="text" placeholder="Nama"></input>
+</div><br>
+
+<div class="ui input labeled fluid">
+<div class="ui label">
+Ulasan
+</div>
+<input type="text" placeholder="Ulasan"></input>
+</div><br>
+
+<button class="ui button primary" style="display: block; margin-left: auto; margin-right: auto;" onclick="submit()">Kirim</button>
+</div>
+
+<div id="buy">
+<div class="ui container segment fluid">
+<h2 class="ui header">Original</h2>
+</div>
+
+<img src="original1.jpg" class="ui image rounded small"></img><br><br>
+
+<button class="ui primary button">Beli Sekarang</button>
+
+<div class="ui container segment fluid">
+<h2 class="ui header">Sambalado</h2>
+</div>
+
+<img src="balado1.jpeg" class="ui image rounded small"></img><br><br>
+
+<button class="ui primary button">Beli Sekarang</button>
+
+</div>
+
+<div id="developer">
+<h1 class="ui header">Developer Options</h1>
+<p class="ui header">Developer Options (removed in final build)</p>
+
+<button class="ui button primary" onclick="dev_normal()" id="dev_norm_btn" href="#home">Normal Navbar</button><br><br>
+
+<button class="ui button secondary" onclick="dev_side()" id="dev_side_btn">Sidebar Navbar</button><br><br>
+
+<button class="ui button secondary" onclick="dev_modal()" id="dev_mdl_btn">Modal Navbar</button>
+</div>
+</div>
+
+<script>
+var home999 = document.getElementById("home1000")
+
+var rightmenu = document.getElementById("rait_menu");
+
+var side_button = document.getElementById("dev_side_btn");
+
+var modal_button = document.getElementById("dev_mdl_btn");
+
+var normal_button = document.getElementById("dev_norm_btn");
+
+var side_invisible = document.getElementById("side_hide");
+
+var side4 = document.getElementById("side3");
+
+var modal = document.getElementById("modal2");
+
+var side = document.getElementById("side2");
+
+var developer4 = document.getElementById("developer2");
+
+var developer3 = document.getElementById("developer");
+
+var home4 = document.getElementById("home3");
+
+var home = document.getElementById("home2");
+
+var flavours = document.getElementById("flavours2");
+
+var jokes = document.getElementById("jokes2");
+
+var comments = document.getElementById("comments2");
+
+var gallery = document.getElementById("gallery2");
+
+var feedback = document.getElementById("feedback2");
+
+var buy = document.getElementById("buy2");
+
+var buy2 = document.getElementById("buy");
+
+var home2 = document.getElementById("home");
+
+var flavours2 = document.getElementById("flavours");
+
+var jokes2 = document.getElementById("jokes");
+
+var comments2 = document.getElementById("comments");
+
+var gallery2 = document.getElementById("gallery");
+
+var feedback2 = document.getElementById("feedback");
+
+var home_side = document.getElementById("home9");
+
+var flavours_side = document.getElementById("flavours9");
+
+var jokes_side = document.getElementById("jokes9");
+
+var comments_side = document.getElementById("comments9");
+
+var gallery_side = document.getElementById("gallery9");
+
+var feedback_side = document.getElementById("feedback9");
+
+var buy_side = document.getElementById("buy9");
+
+
+function home1() {
+  home.classList.add("active");
+  flavours.classList.remove("active");
+  developer3.style.display = "none";
+  jokes.classList.remove("active");
+  comments.classList.remove("active");
+  developer4.classList.remove("active");
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  buy.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function flavours1() {
+  home.classList.remove("active");
+  flavours.classList.add("active");
+  jokes.classList.remove("active");
+  developer3.style.display = "none";
+  comments.classList.remove("active");
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  buy.classList.remove("active");
+  home2.style.display = "block";
+  developer4.classList.remove("active");
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function jokes1() {
+  home.classList.remove("active");
+  flavours.classList.remove("active");
+  jokes.classList.add("active");
+  comments.classList.remove("active");
+  developer3.style.display = "none";
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  buy.classList.remove("active");
+  developer4.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function comments1() {
+  home.classList.remove("active");
+  flavours.classList.remove("active");
+  jokes.classList.remove("active");
+  comments.classList.add("active");
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  developer4.classList.remove("active");
+  buy.classList.remove("active");
+  developer3.style.display = "none";
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function gallery1() {
+  home.classList.remove("active");
+  flavours.classList.remove("active");
+  jokes.classList.remove("active");
+  comments.classList.remove("active");
+  gallery.classList.add("active");
+  developer4.classList.remove("active");
+  feedback.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  developer3.style.display = "none";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function feedback1() {
+  home.classList.remove("active");
+  flavours.classList.remove("active");
+  jokes.classList.remove("active");
+  comments.classList.remove("active");
+  gallery.classList.remove("active");
+  feedback.classList.add("active");
+  developer3.style.display = "none";
+  buy.classList.remove("active");
+  developer4.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function buy1() {
+  home.classList.remove("active");
+  flavours.classList.remove("active");
+  jokes.classList.remove("active");
+  comments.classList.remove("active");
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  buy.classList.add("active");
+  home2.style.display = "none";
+  flavours2.style.display = "none";
+  jokes2.style.display = "none";
+  comments2.style.display = "none";
+  gallery2.style.display = "none";
+  feedback2.style.display = "none";
+  buy2.style.display = "block";
+  developer3.style.display = "none";
+  developer4.classList.remove("active");
+}
+
+function home8() {
+  home9.classList.add("active");
+  flavours9.classList.remove("active");
+  developer3.style.display = "none";
+  jokes9.classList.remove("active");
+  comments9.classList.remove("active");
+  developer4.classList.remove("active");
+  gallery9.classList.remove("active");
+  feedback9.classList.remove("active");
+  buy9.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function flavours8() {
+  home9.classList.remove("active");
+  flavours9.classList.add("active");
+  jokes9.classList.remove("active");
+  developer3.style.display = "none";
+  comments9.classList.remove("active");
+  gallery9.classList.remove("active");
+  feedback9.classList.remove("active");
+  buy9.classList.remove("active");
+  home2.style.display = "block";
+  developer4.classList.remove("active");
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function jokes8() {
+  home9.classList.remove("active");
+  flavours9.classList.remove("active");
+  jokes9.classList.add("active");
+  comments9.classList.remove("active");
+  developer3.style.display = "none";
+  gallery9.classList.remove("active");
+  feedback9.classList.remove("active");
+  buy9.classList.remove("active");
+  developer4.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function comments8() {
+  home9.classList.remove("active");
+  flavours9.classList.remove("active");
+  jokes9.classList.remove("active");
+  comments9.classList.add("active");
+  gallery9.classList.remove("active");
+  feedback9.classList.remove("active");
+  developer4.classList.remove("active");
+  buy9.classList.remove("active");
+  developer3.style.display = "none";
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function gallery8() {
+  home9.classList.remove("active");
+  flavours9.classList.remove("active");
+  jokes9.classList.remove("active");
+  comments9.classList.remove("active");
+  gallery9.classList.add("active");
+  developer4.classList.remove("active");
+  feedback9.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  developer3.style.display = "none";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function feedback8() {
+  home9.classList.remove("active");
+  flavours9.classList.remove("active");
+  jokes9.classList.remove("active");
+  comments9.classList.remove("active");
+  gallery9.classList.remove("active");
+  feedback9.classList.add("active");
+  developer3.style.display = "none";
+  buy9.classList.remove("active");
+  developer4.classList.remove("active");
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+}
+
+function buy8() {
+  home9.classList.remove("active");
+  flavours9.classList.remove("active");
+  jokes9.classList.remove("active");
+  comments9.classList.remove("active");
+  gallery9.classList.remove("active");
+  feedback9.classList.remove("active");
+  buy9.classList.add("active");
+  home2.style.display = "none";
+  flavours2.style.display = "none";
+  jokes2.style.display = "none";
+  comments2.style.display = "none";
+  gallery2.style.display = "none";
+  feedback2.style.display = "none";
+  buy2.style.display = "block";
+  developer3.style.display = "none";
+  developer4.classList.remove("active");
+}
+
+function first() {
+  buy2.style.display = "none";
+  modal.style.display = "none";
+  side.style.display = "none";
+  side_invisible.style.display = "none";
+  home4.style.display = "none";
+  developer3.style.display = "none";
+}
+
+function developer1() {
+  home.classList.remove("active");
+  flavours.classList.remove("active");
+  jokes.classList.remove("active");
+  comments.classList.remove("active");
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  buy.classList.remove("active");
+  developer4.classList.add("active");
+  home2.style.display = "none";
+  flavours2.style.display = "none";
+  jokes2.style.display = "none";
+  comments2.style.display = "none";
+  gallery2.style.display = "none";
+  feedback2.style.display = "none";
+  buy2.style.display = "none";
+  developer3.style.display = "block";
+}
+
+function developer8() {
+  home9.classList.remove("active");
+  flavours9.classList.remove("active");
+  jokes9.classList.remove("active");
+  comments9.classList.remove("active");
+  gallery9.classList.remove("active");
+  feedback9.classList.remove("active");
+  buy9.classList.remove("active");
+  developer9.classList.add("active");
+  home2.style.display = "none";
+  flavours2.style.display = "none";
+  jokes2.style.display = "none";
+  comments2.style.display = "none";
+  gallery2.style.display = "none";
+  feedback2.style.display = "none";
+  buy2.style.display = "none";
+  developer3.style.display = "block";
+}
+
+function side_hidden() {
+  side4.classList.remove("visible");
+  side.style.display = "block";
+  side_invisible.style.display = "none";
+}
+
+function side_visible() {
+  side4.classList.add("visible");
+  side.style.display = "none";
+  side_invisible.style.display = "block";
+}
+
+function dev_normal() {
+  home999.style.display = "block";
+  home.classList.add("active");
+  flavours.classList.remove("active");
+  modal.style.display = "none";
+  side.style.display = "none";
+  home.style.display = "block";
+  flavours.style.display = "block";
+  jokes.style.display = "block";
+  comments.style.display = "block";
+  gallery.style.display = "block";
+  feedback.style.display = "block";
+  buy.style.display = "block";
+  developer.style.display = "block";
+  developer3.style.display = "none";
+  jokes.classList.remove("active");
+  comments.classList.remove("active");
+  developer4.classList.remove("active");
+  gallery.classList.remove("active");
+  feedback.classList.remove("active");
+  buy.classList.remove("active");
+  home4.style.display = "none";
+  home2.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+  normal_button.classList.remove("secondary");
+  normal_button.classList.add("primary");
+  modal_button.classList.remove("primary");
+  modal_button.classList.add("secondary");
+  side_button.classList.remove("primary");
+  side_button.classList.add("secondary");
+}
+
+function dev_side() {
+  home999.style.display = "none";
+  home.style.display = "none";
+  flavours.style.display = "none";
+  home_side.classList.add("active");
+  flavours.classList.remove("active");
+  modal.style.display = "none";
+  side.style.display = "block";
+  developer3.style.display = "none";
+  jokes.style.display = "none";
+  comments.style.display = "none";
+  developer4.style.display = "none";
+  gallery.style.display = "none";
+  feedback.style.display = "none";
+  buy.style.display = "none";
+  home2.style.display = "block";
+  home4.style.display = "block";
+  flavours2.style.display = "block";
+  jokes2.style.display = "block";
+  comments2.style.display = "block";
+  gallery2.style.display = "block";
+  feedback2.style.display = "block";
+  buy2.style.display = "none";
+  normal_button.classList.remove("primary");
+  normal_button.classList.add("secondary");
+  modal_button.classList.remove("primary");
+  modal_button.classList.add("secondary");
+  side_button.classList.remove("secondary");
+  side_button.classList.add("primary");
+}
+
+function dev_modal() {
+  normal_button.classList.add("primary");
+  modal_button.classList.remove("primary");
+  modal_button.classList.add("secondary");
+  side_button.classList.remove("primary");
+  side_button.classList.add("primary");
+}
+</script>
+
+<body onload="first()">
+</body>
