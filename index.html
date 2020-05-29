@@ -5,11 +5,12 @@
   <script src="src/index.js"></script>
   <script src="src/semantic.min.js"></script>
   <link rel="stylesheet" id="pagestyle" href="semantic.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <div class="ui secondary menu pointing fixed" id="navbar" style="background-color: #fff;">
   <div class="ui item">
-    <a href="#home" style="color: #000;">Mr. KataRasa</a>
+    <a href="#home" style="color: #000;" onclick='homenava()'>Mr. KataRasa</a>
   </div>
 
   <div class="right menu">
@@ -26,14 +27,6 @@
     <a href="#feedback" class="item" onclick="feedbacknava()" id="feedback-nav">Ulasan</a>
 
     <button class="ui button primary" onclick="buy()" href="#buybody" id="buy-btn-nav">Beli Sekarang</button>
-
-    <button class="ui icon button primary inverted" id="light-button" onclick="lighttheme()">
-      <i class="sun icon"></i>
-    </button>
-
-    <button class="ui button icon secondary" id="dark-button" onclick="darktheme()" style="color: #fff;">
-      <i class="moon icon"></i>
-    </button>
   </div>
   </div>
 
