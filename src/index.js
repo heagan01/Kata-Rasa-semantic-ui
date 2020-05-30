@@ -3,50 +3,45 @@ function first() {
   var buybody = document.getElementById("buybody");
 
   buybody.style.display = "none";
-  lightbtn.style.display = "none";
 }
 
-function swapStyleSheet(sheet) {
-  document.getElementById("pagestyle").setAttribute("href", sheet);
-}
-
-function darktheme() {
-  var darkbtn = document.getElementById("dark-button");
-  var lightbtn = document.getElementById("light-button")
-  var nav = document.getElementById("navbar");
-  var buybtnnav = document.getElementById("buy-btn-nav");
-  var buybtnbody = document.getElementById("buy-btn-body");
-  var buybtnoriginal = document.getElementById("buy-original");
-  var buybtnsambalado = document.getElementById("buy-sambalado");
-
-  darkbtn.style.display = "none";
-  lightbtn.style.display = "block";
-  nav.classList.add("inverted");
-  buybtnnav.classList.add("inverted");
-  buybtnbody.classList.add("inverted");
-  buybtnoriginal.classList.add("inverted");
-  buybtnsambalado.classList.add("inverted");
-  swapStyleSheet("semantic.cyborg.css");
-}
-
-
-function lighttheme() {
-  var darkbtn = document.getElementById("dark-button");
-  var lightbtn = document.getElementById("light-button")
-  var nav = document.getElementById("navbar");
-  var buybtnnav = document.getElementById("buy-btn-nav");
-  var buybtnbody = document.getElementById("buy-btn-body");
-  var buybtnoriginal = document.getElementById("buy-original");
-  var buybtnsambalado = document.getElementById("buy-sambalado");
-
-  darkbtn.style.display = "block";
-  lightbtn.style.display = "none";
-  nav.classList.remove("inverted");
-  buybtnnav.classList.remove("inverted");
-  buybtnbody.classList.remove("inverted");
-  buybtnoriginal.classList.remove("inverted");
-  buybtnsambalado.classList.remove("inverted");
-  swapStyleSheet("semantic.min.css");
+function changeLanguage() {
+  if (document.getElementById('language').innerHTML === 'ID') {
+    document.getElementById('language').innerHTML = 'EN';
+    document.getElementById('home-nav').innerHTML = 'Home';
+    document.getElementById('flavours-nav').innerHTML = 'Flavours';
+    document.getElementById('jokes-nav').innerHTML = 'Wise Words';
+    document.getElementById('comments-nav').innerHTML = 'Review';
+    document.getElementById('gallery-nav').innerHTML = 'Gallery';
+    document.getElementById('feedback-nav').innerHTML = 'Feedback';
+    document.getElementById('paragraph').innerHTML = 'Cassava chips from Indonesia';
+    document.getElementById('buy-btn-body').innerHTML = 'Buy Now';
+    document.getElementById('flavours-header').innerHTML = 'Flavours';
+    document.getElementById('original-meta').innerHTML = 'Available';
+    document.getElementById('original-description').innerHTML = 'Crunchy, but a little bit salty.';
+    document.getElementById('sambalado-meta').innerHTML = 'Available';
+    document.getElementById('sambalado-description').innerHTML = "It's spicy, but has a little bit of an orange flavour.";
+    document.getElementById('keju-unyu-meta').innerHTML = "Available";
+    document.getElementById('keju-unyu-description').innerHTML = "Sweet, but a little bit salty.";
+    document.getElementById('cabe-gledek-meta').innerHTML = "Available";
+    document.getElementById('cabe-gledek-description').innerHTML = "Just spicy.";
+    document.getElementById('jokes-header').innerHTML = "Wise Words";
+    document.getElementById('wise-words-1').innerHTML = "Don't be scared to be fat.<br>More fat, equals more weight,<br>more hard to be kidnapped.<br>To stay save eat a lot.";
+    document.getElementById('comments-1').innerHTML = "The chips are delicious!";
+    document.getElementById('comments-2').innerHTML = "The chips are delicious, I'm gonna buy more.";
+    document.getElementById('gallery-header').innerHTML = "Gallery";
+    document.getElementById('feedback-header').innerHTML = "Feedback";
+    document.getElementById('name-header').innerHTML = "Name";
+    document.getElementById('name-label').innerHTML = "Name";
+    document.getElementById('review-header').innerHTML = "Review";
+    document.getElementById('review-label').innerHTML = "Review";
+    document.getElementById('send-button').innerHTML = "Send";
+    document.getElementById('buy-header').innerHTML = "Buy Now";
+    document.getElementById('buy-original').innerHTML = "Buy Now";
+    document.getElementById('buy-sambalado').innerHTML = "Buy Now";
+  } else {
+    location.reload();
+  }
 }
 
 function homenava() {

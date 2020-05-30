@@ -14,6 +14,7 @@
   </div>
 
   <div class="right menu">
+    <button class="ui button" id="language" onclick="changeLanguage()">ID</button>
     <a href="#home" class="active item" onclick="homenava()" id="home-nav">Beranda</a>
 
     <a href="#flavours" class="item" onclick="flavoursnava()" id="flavours-nav">Rasa-Rasa</a>
@@ -32,7 +33,7 @@
 
 <div id="home" style="padding-top: 65.0;">
   <h1 class="ui header center aligned">Kata Rasa Indonesia</h1>
-  <p class="ui header center aligned">Keripik singkong dari Indonesia</p>
+  <p class="ui header center aligned" id='paragraph'>Keripik singkong dari Indonesia</p>
 
   <button id="buy-btn-body" class="ui button primary" style="display: block; margin-left: auto; margin-right: auto;" onclick="buy()" href="#buybody">Beli Sekarang</button>
 
@@ -40,59 +41,46 @@
 </div>
 
 <div id="flavours" style="margin-top: 500px; padding-top: 44px;">
-  <h1 class="ui header center aligned">Rasa-Rasa</h1>
+  <h1 class="ui header center aligned" id='flavours-header'>Rasa-Rasa</h1>
 
   <div class="ui card centered">
     <div class="content">
       <div class="header">Original</div>
-      <div class="meta">Sudah Tersedia</div>
-      <div class="description">Gurih dan garing, sedikit asin.</div>
+      <div class="meta" id='original-meta'>Sudah Tersedia</div>
+      <div class="description" id='original-description'>Gurih dan garing, sedikit asin.</div>
     </div>
   </div>
 
   <div class="ui card centered">
     <div class="content">
       <div class="header">Sambalado</div>
-      <div class="meta">Sudah Tersedia</div>
-      <div class="description">Rasanya pedas, ada rasa jeruk-jeruknya gitu.</div>
+      <div class="meta" id='sambalado-meta'>Sudah Tersedia</div>
+      <div class="description" id='sambalado-description'>Rasanya pedas, ada rasa jeruk-jeruknya gitu.</div>
     </div>
   </div>
 
     <div class="ui card centered">
       <div class="content">
         <div class="header">Keju unyu</div>
-        <div class="meta">Sudah Tersedia</div>
-        <div class="description">Manis-manis, sedikit asin.</div>
+        <div class="meta" id='keju-unyu-meta'>Sudah Tersedia</div>
+        <div class="description" id='keju-unyu-description'>Manis-manis, sedikit asin.</div>
       </div>
     </div>
 
     <div class="ui centered card">
       <div class="content">
         <div class="header">Cabe gledek</div>
-        <div class="meta">Sudah Tersedia</div>
-        <div class="description">Pokoknya pedas.</div>
+        <div class="meta" id='cabe-gledek-meta'>Sudah Tersedia</div>
+        <div class="description" id='cabe-gledek-description'>Pokoknya pedas.</div>
       </div>
     </div>
-    <div class="ui centered card">
-      <div class="content">
-        <div class="header">Pedas sedang</div>
-        <div class="meta">Coming Soon</div>
-        <div class="description">Ditunggu ya, para penggemar Kata Rasa.</div>
-      </div>
-    </div>
-    <div class="ui centered card">
-      <div class="content">
-        <div class="header">Pedas</div>
-        <div class="meta">Coming Soon</div>
-        <div class="description">Ditunggu ya, para penggemar Kata Rasa.</div>
-      </div>
     </div>
   </div>
 
 <div id="jokes" style="margin-top: 68px; padding-top: 44px;">
-  <h1 class="ui header center aligned">Kalimat Bijak</h1>
+  <h1 class="ui header center aligned" id='jokes-header'>Kalimat Bijak</h1>
 
-  <div class="ui card centered">
+  <div class="ui card centered" id='wise-words-1'>
     <div class="content">
     <div class="description">Jangan takut gendut.<br>
     Tambah gendut, tambah berat,<br>
@@ -109,7 +97,7 @@ Biar aman ngemil aja yang banyak.</div>
       <div class="content">
         <div class="header">Resya Deng</div>
         <div class="meta">5/5</div>
-        <div class="description">Keripiknya enak!</div>
+        <div class="description" id='comments-1'>Keripiknya enak!</div>
       </div>
     </div>
 
@@ -117,13 +105,13 @@ Biar aman ngemil aja yang banyak.</div>
       <div class="content">
         <div class="header">Syana Deng</div>
         <div class="meta">5/5</div>
-        <div class="description">Keripiknya enak, bakal beli lagi.</div>
+        <div class="description" id='comments-2'>Keripiknya enak, bakal beli lagi.</div>
       </div>
     </div>
   </div>
 
 <div id="gallery" style="margin-top 68px; padding-top: 44px;">
-   <h1 class="ui header center aligned">Galeri</h1>
+   <h1 class="ui header center aligned" id='gallery-header'>Galeri</h1>
 
    <h3 class="ui header center aligned">Original</h3>
    <img src="original1.jpg" alt="" class="ui image medium rounded centered"><br>
@@ -137,29 +125,29 @@ Biar aman ngemil aja yang banyak.</div>
 </div>
 
 <div id="feedback" style="margin-top: 68px; padding-top: 44px;">
-  <h1 class="ui header center aligned">Umpan Balik</h1>
+  <h1 class="ui header center aligned" id='feedback-header'>Umpan Balik</h1>
 
-  <h3 class="ui header" style="margin-left: 206.98;">Nama</h3>
+  <h3 class="ui header" style="margin-left: 206.98;" id='name-header'>Nama</h3>
   <div class="ui labeled input" style="margin-left: 10px;">
-    <div class="ui label">
+    <div class="ui label" id='name-label'>
       Nama
     </div>
-    <input type="text" placeholder="Nama">
+    <input type="text">
   </div>
 
-  <h3 class="ui header" style="margin-left: 206.98;">Ulasan</h3>
+  <h3 class="ui header" style="margin-left: 206.98;" id='review-header'>Ulasan</h3>
   <div class="ui labeled input" style="margin-left: 10px;">
-    <div class="ui label">
+    <div class="ui label" id='review-label'>
       Ulasan
     </div>
-    <input type="text" placeholder="Ulasan">
+    <input type="text">
 
-    <button class="ui button primary" style="margin-left: 10px;">Kirim</button>
+    <button class="ui button primary" style="margin-left: 10px;" id='send-button'>Kirim</button>
   </div>
   </div>
 
   <div id="buybody" style="margin-top: 68px; padding-top: 44px;">
-    <h1 class="ui header center aligned">Beli Sekarang</h1>
+    <h1 class="ui header center aligned" id='buy-header'>Beli Sekarang</h1>
 
     <div class="ui two column doubling stackable grid container">
       <div class="column">
