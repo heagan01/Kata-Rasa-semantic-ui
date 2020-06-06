@@ -5,6 +5,20 @@ function first() {
   buybody.style.display = "none";
 }
 
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    items:1,
+    center:true,
+    responsive:{
+        600:{
+            items:4
+        }
+    }
+})
+});
+
 function changeLanguage() {
   if (document.getElementById('language').innerHTML === 'ID') {
     document.getElementById('language').innerHTML = 'EN';
@@ -39,6 +53,7 @@ function changeLanguage() {
     document.getElementById('buy-header').innerHTML = "Buy Now";
     document.getElementById('buy-original').innerHTML = "Buy Now";
     document.getElementById('buy-sambalado').innerHTML = "Buy Now";
+    document.getElementById('buy-btn-nav').innerHTML = "Buy Now";
   } else {
     location.reload();
   }
