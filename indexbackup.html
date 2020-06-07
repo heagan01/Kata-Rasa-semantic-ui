@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
-<div class="ui secondary inverted yellow menu fixed" id="navbar">
+<div class="ui secondary menu pointing fixed" id="navbar" style="background-color: #fff;">
   <div class="ui item">
-    <a href="#home" style="color: #fff;" onclick='homenava()'>Mr. KataRasa</a>
+    <a href="#home" style="color: #000;" onclick='homenava()'>Mr. KataRasa</a>
   </div>
 
   <div class="right menu">
-    <button class="ui button orange" id="language" onclick="changeLanguage()">ID</button>
+    <button class="ui button" id="language" onclick="changeLanguage()">ID</button>
     <a href="#home" class="active item" onclick="homenava()" id="home-nav">Beranda</a>
 
     <a href="#flavours" class="item" onclick="flavoursnava()" id="flavours-nav">Rasa-Rasa</a>
@@ -29,11 +29,11 @@
 
     <a href="#feedback" class="item" onclick="feedbacknava()" id="feedback-nav">Ulasan</a>
 
-    <button class="ui button orange" onclick="buy()" href="#buybody" id="buy-btn-nav">Beli Sekarang</button>
+    <button class="ui button primary" onclick="buy()" href="#buybody" id="buy-btn-nav">Beli Sekarang</button>
   </div>
   </div>
 
-<div id="home" style="padding-top: 65.0; background-color: #fff4d1;">
+<div id="home" style="padding-top: 65.0;">
   <div class="owl-carousel owl-theme">
     <div class='itemowl'><img src="banner1.jpeg" alt=""></div>
     <div class='itemowl'><img src="banner2.jpeg" alt=""></div>
@@ -49,12 +49,12 @@
   <h1 class="ui header center aligned">Kata Rasa Indonesia</h1>
   <p class="ui header center aligned" id='paragraph'>Keripik singkong dari Indonesia</p>
 
-  <button id="buy-btn-body" class="ui button orange" style="display: block; margin-left: auto; margin-right: auto;" onclick="buy()" href="#buybody">Beli Sekarang</button>
+  <button id="buy-btn-body" class="ui button primary" style="display: block; margin-left: auto; margin-right: auto;" onclick="buy()" href="#buybody">Beli Sekarang</button>
 
   <i class="down arrow icon" style="margin-top: 470px; display: block; margin-left: auto; margin-right: auto;"></i>
 </div>
 
-<div id="flavours" style="margin-top: 500px; padding-top: 44px; background-color: #fff4d1;">
+<div id="flavours" style="margin-top: 500px; padding-top: 44px;">
   <h1 class="ui header center aligned" id='flavours-header'>Rasa-Rasa</h1>
 
   <div class="ui card centered">
@@ -91,7 +91,7 @@
     </div>
   </div>
 
-<div id="jokes" style="margin-top: 68px; padding-top: 44px; background-color: #fff4d1;">
+<div id="jokes" style="margin-top: 68px; padding-top: 44px;">
   <h1 class="ui header center aligned" id='jokes-header'>Kalimat Bijak</h1>
 
   <div class="ui card centered" id='wise-words-1'>
@@ -104,7 +104,7 @@ Biar aman ngemil aja yang banyak.</div>
 </div>
 </div>
 
-<div id="comments" style="margin-top: 68px; padding-top: 44px; background-color: #fff4d1;">
+<div id="comments" style="margin-top: 68px; padding-top: 44px;">
   <h1 class="ui header center aligned">Kesan Pesan</h1>
 
     <div class="ui centered card">
@@ -124,7 +124,7 @@ Biar aman ngemil aja yang banyak.</div>
     </div>
   </div>
 
-<div id="gallery" style="margin-top 68px; padding-top: 44px; background-color: #fff4d1;">
+<div id="gallery" style="margin-top 68px; padding-top: 44px;">
    <h1 class="ui header center aligned" id='gallery-header'>Galeri</h1>
 
    <h3 class="ui header center aligned">Original</h3>
@@ -156,23 +156,23 @@ Biar aman ngemil aja yang banyak.</div>
     </div>
     <input type="text">
 
-    <button class="ui button orange" style="margin-left: 10px;" id='send-button'>Kirim</button>
+    <button class="ui button primary" style="margin-left: 10px;" id='send-button'>Kirim</button>
   </div>
   </div>
 
-  <div id="buybody" style="margin-top: 68px; padding-top: 44px; background-color: #fff4d1;">
+  <div id="buybody" style="margin-top: 68px; padding-top: 44px;">
     <h1 class="ui header center aligned" id='buy-header'>Beli Sekarang</h1>
 
     <div class="ui two column doubling stackable grid container">
       <div class="column">
         <h3 class="ui header">Original</h3>
         <img src="original1.jpg" alt="" class="ui image medium rounded"><br>
-        <button class="ui button orange" id="buy-original" onclick="buyoriginal()">Beli Sekarang</button>
+        <button class="ui button primary" id="buy-original" onclick="buyoriginal()">Beli Sekarang</button>
       </div>
       <div class="column">
         <h3 class="ui header">Sambalado</h3>
         <img src="sambalado1.jpeg" alt="" class="ui image medium rounded"><br>
-        <button class="ui button orange" id="buy-sambalado" onclick="buysambalado()" style="image-height: 960px;">Beli Sekarang</button>
+        <button class="ui button primary" id="buy-sambalado" onclick="buysambalado()" style="image-height: 960px;">Beli Sekarang</button>
       </div>
     </div>
   </div>
