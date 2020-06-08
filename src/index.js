@@ -16,8 +16,20 @@ $(document).ready(function(){
             items:4
         }
     }
+
 })
+
+        var sidebar = new GeminiScrollbar({
+        element: document.querySelector('.wrapper'),
+        onResize: function() {
+          console.log('sidebar resized');
+        }
+      }).create();
 });
+
+window.onload = function() {
+
+    };
 
 // var token = 'your access token',
 //     username = 'rudrastyh', // rudrastyh - my username :)
