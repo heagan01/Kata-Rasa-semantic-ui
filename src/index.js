@@ -1,5 +1,4 @@
 function first() {
-  var lightbtn = document.getElementById("light-button");
   var buybody = document.getElementById("buybody");
 
   buybody.style.display = "none";
@@ -19,18 +18,15 @@ $(document).ready(function(){
 
 })
 
-        var sidebar = new GeminiScrollbar({
-        element: document.querySelector('.wrapper'),
-        onResize: function() {
-          console.log('sidebar resized');
-        }
-      }).create();
+  var sidebar = new GeminiScrollbar({
+  element: document.querySelector('.wrapper'),
+  onResize: function() {
+    console.log('sidebar resized');
+  }
+}).create();
 });
 
-window.onload = function() {
-
-    };
-
+// doesn't matter
 // var token = 'your access token',
 //     username = 'rudrastyh', // rudrastyh - my username :)
 //     num_photos = 4;
@@ -298,17 +294,34 @@ function buy() {
   var gallerybody = document.getElementById("gallery");
   var feedbackbody = document.getElementById("feedback");
 
-  homebody.style.display = "none";
-  flavoursbody.style.display = "none";
-  jokesbody.style.display = "none";
-  commentsbody.style.display = "none";
-  gallerybody.style.display = "none";
-  feedbackbody.style.display = "none";
-  homenav.classList.remove("active");
-  flavoursnav.classList.remove("active");
-  jokesnav.classList.remove("active");
-  commentsnav.classList.remove("active");
-  gallerynav.classList.remove("active");
-  feedbacknav.classList.remove("active");
-  buybody.style.display = "block";
+  if (document.getElementById('buybody').getAttribute('style') === 'display: none;') {
+    homebody.style.display = "none";
+    flavoursbody.style.display = "none";
+    jokesbody.style.display = "none";
+    commentsbody.style.display = "none";
+    gallerybody.style.display = "none";
+    feedbackbody.style.display = "none";
+    homenav.classList.remove("active");
+    flavoursnav.classList.remove("active");
+    jokesnav.classList.remove("active");
+    commentsnav.classList.remove("active");
+    gallerynav.classList.remove("active");
+    feedbacknav.classList.remove("active");
+    buybody.style.display = "block";
+  } else {
+    homebody.style.display = "block";
+    flavoursbody.style.display = "block";
+    jokesbody.style.display = "block";
+    commentsbody.style.display = "block";
+    gallerybody.style.display = "block";
+    feedbackbody.style.display = "block";
+    homenav.classList.add("active");
+    flavoursnav.classList.remove("active");
+    jokesnav.classList.remove("active");
+    commentsnav.classList.remove("active");
+    gallerynav.classList.remove("active");
+    feedbacknav.classList.remove("active");
+    buybody.style.display = "none";
+    location.href = '#home';
+  }
 }
