@@ -2,6 +2,7 @@ function first() {
   var buybody = document.getElementById("buybody");
 
   buybody.style.display = "none";
+  document.getElementById('buy-btn-nav-secondary').style.display = 'none';
 }
 
 $(document).ready(function(){
@@ -294,34 +295,64 @@ function buy() {
   var gallerybody = document.getElementById("gallery");
   var feedbackbody = document.getElementById("feedback");
 
-  if (document.getElementById('buybody').getAttribute('style') === 'display: none;') {
-    homebody.style.display = "none";
-    flavoursbody.style.display = "none";
-    jokesbody.style.display = "none";
-    commentsbody.style.display = "none";
-    gallerybody.style.display = "none";
-    feedbackbody.style.display = "none";
-    homenav.classList.remove("active");
-    flavoursnav.classList.remove("active");
-    jokesnav.classList.remove("active");
-    commentsnav.classList.remove("active");
-    gallerynav.classList.remove("active");
-    feedbacknav.classList.remove("active");
-    buybody.style.display = "block";
-  } else {
-    homebody.style.display = "block";
-    flavoursbody.style.display = "block";
-    jokesbody.style.display = "block";
-    commentsbody.style.display = "block";
-    gallerybody.style.display = "block";
-    feedbackbody.style.display = "block";
-    homenav.classList.add("active");
-    flavoursnav.classList.remove("active");
-    jokesnav.classList.remove("active");
-    commentsnav.classList.remove("active");
-    gallerynav.classList.remove("active");
-    feedbacknav.classList.remove("active");
-    buybody.style.display = "none";
-    location.href = '#home';
-  }
+  homebody.style.display = "none";
+  flavoursbody.style.display = "none";
+  jokesbody.style.display = "none";
+  commentsbody.style.display = "none";
+  gallerybody.style.display = "none";
+  feedbackbody.style.display = "none";
+  homenav.classList.remove("active");
+  flavoursnav.classList.remove("active");
+  jokesnav.classList.remove("active");
+  commentsnav.classList.remove("active");
+  gallerynav.classList.remove("active");
+  feedbacknav.classList.remove("active");
+  buybody.style.display = "block";
+  homenav.style.display = 'none';
+  flavoursnav.style.display = 'none';
+  jokesnav.style.display = 'none';
+  commentsnav.style.display = 'none';
+  gallerynav.style.display = 'none';
+  feedbacknav.style.display = 'none';
+  document.getElementById('buy-btn-nav-secondary').style.display = 'block';
+  document.getElementById('buy-btn-nav').style.display = 'none';
+}
+
+function buynone() {
+  var homenav = document.getElementById("home-nav");
+  var flavoursnav = document.getElementById("flavours-nav");
+  var jokesnav = document.getElementById("jokes-nav");
+  var commentsnav = document.getElementById("comments-nav");
+  var gallerynav = document.getElementById("gallery-nav");
+  var feedbacknav = document.getElementById("feedback-nav");
+  var buybody = document.getElementById("buybody");
+  var homebody = document.getElementById("home");
+  var flavoursbody = document.getElementById("flavours");
+  var jokesbody = document.getElementById("jokes");
+  var commentsbody = document.getElementById("comments");
+  var gallerybody = document.getElementById("gallery");
+  var feedbackbody = document.getElementById("feedback");
+
+  homebody.style.display = "block";
+  flavoursbody.style.display = "block";
+  jokesbody.style.display = "block";
+  commentsbody.style.display = "block";
+  gallerybody.style.display = "block";
+  feedbackbody.style.display = "block";
+  homenav.classList.add("active");
+  flavoursnav.classList.remove("active");
+  jokesnav.classList.remove("active");
+  commentsnav.classList.remove("active");
+  gallerynav.classList.remove("active");
+  feedbacknav.classList.remove("active");
+  buybody.style.display = "none";
+  homenav.style.display = 'block';
+  flavoursnav.style.display = 'block';
+  jokesnav.style.display = 'block';
+  commentsnav.style.display = 'block';
+  gallerynav.style.display = 'block';
+  feedbacknav.style.display = 'block';
+  location.href = '#home';
+  document.getElementById('buy-btn-nav-secondary').style.display = 'none';
+  document.getElementById('buy-btn-nav').style.display = 'block';
 }
