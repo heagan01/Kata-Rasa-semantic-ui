@@ -1,11 +1,10 @@
 function first() {
-  var buybody = document.getElementById("buybody");
 
-  buybody.style.display = "none";
-  document.getElementById('buy-btn-nav-secondary').style.display = 'none';
 }
 
 $(document).ready(function(){
+  var buybody = document.getElementById("buybody");
+
   $('.owl-carousel').owlCarousel({
     loop:false,
     margin:10,
@@ -16,6 +15,9 @@ $(document).ready(function(){
             items:4
         }
     }
+
+  buybody.style.display = "none";
+  document.getElementById('buy-btn-nav-secondary').style.display = 'none';
 
 })
 
