@@ -1,7 +1,3 @@
-function first() {
-
-}
-
 $(document).ready(function(){
   var buybody = document.getElementById("buybody");
 
