@@ -1,8 +1,8 @@
-$(document).ready(function(){
-  var buybody = document.getElementById("buybody");
 
+
+$(document).ready(function(){
   $('.owl-carousel').owlCarousel({
-    loop:false,
+    loop:true,
     margin:10,
     items:1,
     center:true,
@@ -12,16 +12,9 @@ $(document).ready(function(){
         }
     }
 
-  buybody.style.display = "none";
-  document.getElementById('buy-btn-nav-secondary').style.display = 'none';
-
 })
-
   var sidebar = new GeminiScrollbar({
-  element: document.querySelector('.wrapper'),
-  onResize: function() {
-    console.log('sidebar resized');
-  }
+  element: document.querySelector('.wrapper')
 }).create();
 });
 
@@ -354,3 +347,5 @@ function buynone() {
   document.getElementById('buy-btn-nav-secondary').style.display = 'none';
   document.getElementById('buy-btn-nav').style.display = 'block';
 }
+document.getElementById('buybody').style.display = "none";
+document.getElementById('buy-btn-nav-secondary').style.display = 'none';

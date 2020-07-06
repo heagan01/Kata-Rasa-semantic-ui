@@ -1,23 +1,5 @@
-/**
- * gemini-scrollbar
- * @version 1.5.3
- * @link http://noeldelgado.github.io/gemini-scrollbar/
- * @license MIT
- */
-(function() {
-  var SCROLLBAR_WIDTH, DONT_CREATE_GEMINI, CLASSNAMES;
-
-  CLASSNAMES = {
-    element: 'gm-scrollbar-container',
-    verticalScrollbar: 'gm-scrollbar -vertical',
-    horizontalScrollbar: 'gm-scrollbar -horizontal',
-    thumb: 'thumb',
-    view: 'gm-scroll-view',
-    autoshow: 'gm-autoshow',
-    disable: 'gm-scrollbar-disable-selection',
-    prevented: 'gm-prevented',
-    resizeTrigger: 'gm-resize-trigger',
-  };
+(function(){var SCROLLBAR_WIDTH,DONT_CREATE_GEMINI,CLASSNAMES;CLASSNAMES={element: 'gm-scrollbar-container',verticalScrollbar: 'gm-scrollbar -vertical',horizontalScrollbar: 'gm-scrollbar -horizontal',thumb: 'thumb',view: 'gm-scroll-view',autoshow: 'gm-autoshow',disable: 'gm-scrollbar-disable-selection',prevented: 'gm-prevented',resizeTrigger: 'gm-resize-trigger',
+};
 
   function getScrollbarWidth() {
     var e = document.createElement('div'), sw;
@@ -51,9 +33,6 @@
     el.className = el.className.replace(new RegExp('(^|\\b)' + classNames.join('|') + '(\\b|$)', 'gi'), ' ');
   }
 
-  /* Copyright (c) 2015 Lucas Wiener
-   * https://github.com/wnr/element-resize-detector
-   */
   function isIE() {
     var agent = navigator.userAgent.toLowerCase();
     return agent.indexOf("msie") !== -1 || agent.indexOf("trident") !== -1 || agent.indexOf(" edge/") !== -1;
@@ -164,20 +143,6 @@
   };
 
   GeminiScrollbar.prototype._createResizeTrigger = function createResizeTrigger() {
-    // We need to arrange for self.scrollbar.update to be called whenever
-    // the DOM is changed resulting in a size-change for our div. To make
-    // this happen, we use a technique described here:
-    // http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/.
-    //
-    // The idea is that we create an <object> element in our div, which we
-    // arrange to have the same size as that div. The <object> element
-    // contains a Window object, to which we can attach an onresize
-    // handler.
-    //
-    // (React appears to get very confused by the object (we end up with
-    // Chrome windows which only show half of the text they are supposed
-    // to), so we always do this manually.)
-
     var obj = document.createElement('object');
     addClass(obj, [CLASSNAMES.resizeTrigger]);
     obj.type = 'text/html';
@@ -188,14 +153,12 @@
       win.addEventListener('resize', resizeHandler);
     };
 
-    //IE: Does not like that this happens before, even if it is also added after.
     if (!isIE()) {
       obj.data = 'about:blank';
     }
 
     this.element.appendChild(obj);
 
-    //IE: This must occur after adding the object to the DOM.
     if (isIE()) {
       obj.data = 'about:blank';
     }
