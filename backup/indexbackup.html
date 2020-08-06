@@ -1,0 +1,181 @@
+<title>Kata Rasa Indonesia</title>
+
+<head>
+  <script src="src/jquery.js"></script>
+  <script src="src/index.js"></script>
+  <script src="src/semantic.min.js"></script>
+  <link rel="stylesheet" id="pagestyle" href="semantic.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<div class="ui secondary menu pointing fixed" id="navbar" style="background-color: #fff;">
+  <div class="ui item">
+    <a href="#home" style="color: #000;" onclick='homenava()'>Mr. KataRasa</a>
+  </div>
+
+  <div class="right menu">
+    <button class="ui button" id="language" onclick="changeLanguage()">ID</button>
+    <a href="#home" class="active item" onclick="homenava()" id="home-nav">Beranda</a>
+
+    <a href="#flavours" class="item" onclick="flavoursnava()" id="flavours-nav">Rasa-Rasa</a>
+
+    <a href="#jokes" class="item" onclick="jokesnava()" id="jokes-nav">Kalimat Bijak</a>
+
+    <a href="#comments" class="item" onclick="commentsnava()" id="comments-nav">Kesan Pesan</a>
+
+    <a href="#gallery" class="item" onclick="gallerynava()" id="gallery-nav">Galeri</a>
+
+    <a href="#feedback" class="item" onclick="feedbacknava()" id="feedback-nav">Ulasan</a>
+
+    <button class="ui button primary" onclick="buy()" href="#buybody" id="buy-btn-nav">Beli Sekarang</button>
+  </div>
+  </div>
+
+<div id="home" style="padding-top: 65.0;">
+  <div class="owl-carousel owl-theme">
+    <div class='itemowl'><img src="banner1.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner2.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner3.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner4.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner5.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner6.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner7.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner8.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner9.jpeg" alt=""></div>
+    <div class='itemowl'><img src="banner10.jpeg" alt=""></div>
+  </div>
+  <h1 class="ui header center aligned">Kata Rasa Indonesia</h1>
+  <p class="ui header center aligned" id='paragraph'>Keripik singkong dari Indonesia</p>
+
+  <button id="buy-btn-body" class="ui button primary" style="display: block; margin-left: auto; margin-right: auto;" onclick="buy()" href="#buybody">Beli Sekarang</button>
+
+  <i class="down arrow icon" style="margin-top: 470px; display: block; margin-left: auto; margin-right: auto;"></i>
+</div>
+
+<div id="flavours" style="margin-top: 500px; padding-top: 44px;">
+  <h1 class="ui header center aligned" id='flavours-header'>Rasa-Rasa</h1>
+
+  <div class="ui card centered">
+    <div class="content">
+      <div class="header">Original</div>
+      <div class="meta" id='original-meta'>Sudah Tersedia</div>
+      <div class="description" id='original-description'>Gurih dan garing, sedikit asin.</div>
+    </div>
+  </div>
+
+  <div class="ui card centered">
+    <div class="content">
+      <div class="header">Sambalado</div>
+      <div class="meta" id='sambalado-meta'>Sudah Tersedia</div>
+      <div class="description" id='sambalado-description'>Rasanya pedas, ada rasa jeruk-jeruknya gitu.</div>
+    </div>
+  </div>
+
+    <div class="ui card centered">
+      <div class="content">
+        <div class="header">Keju unyu</div>
+        <div class="meta" id='keju-unyu-meta'>Sudah Tersedia</div>
+        <div class="description" id='keju-unyu-description'>Manis-manis, sedikit asin.</div>
+      </div>
+    </div>
+
+    <div class="ui centered card">
+      <div class="content">
+        <div class="header">Cabe gledek</div>
+        <div class="meta" id='cabe-gledek-meta'>Sudah Tersedia</div>
+        <div class="description" id='cabe-gledek-description'>Pokoknya pedas.</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<div id="jokes" style="margin-top: 68px; padding-top: 44px;">
+  <h1 class="ui header center aligned" id='jokes-header'>Kalimat Bijak</h1>
+
+  <div class="ui card centered" id='wise-words-1'>
+    <div class="content">
+    <div class="description">Jangan takut gendut.<br>
+    Tambah gendut, tambah berat,<br>
+  tambah susah diculik.<br>
+Biar aman ngemil aja yang banyak.</div>
+  </div>
+</div>
+</div>
+
+<div id="comments" style="margin-top: 68px; padding-top: 44px;">
+  <h1 class="ui header center aligned">Kesan Pesan</h1>
+
+    <div class="ui centered card">
+      <div class="content">
+        <div class="header">Resya Deng</div>
+        <div class="meta">5/5</div>
+        <div class="description" id='comments-1'>Keripiknya enak!</div>
+      </div>
+    </div>
+
+    <div class="ui centered card">
+      <div class="content">
+        <div class="header">Syana Deng</div>
+        <div class="meta">5/5</div>
+        <div class="description" id='comments-2'>Keripiknya enak, bakal beli lagi.</div>
+      </div>
+    </div>
+  </div>
+
+<div id="gallery" style="margin-top 68px; padding-top: 44px;">
+   <h1 class="ui header center aligned" id='gallery-header'>Galeri</h1>
+
+   <h3 class="ui header center aligned">Original</h3>
+   <img src="original1.jpg" alt="" class="ui image medium rounded centered"><br>
+   <img src="original2.jpg" alt="" class="ui image medium rounded centered"><br>
+   <img src="original3.jpg" alt="" class="ui image medium rounded centered"><br>
+
+   <h3 class="ui header center aligned">Sambalado</h3>
+   <img src="sambalado1.jpeg" alt="" class="ui image medium rounded centered"><br>
+   <img src="sambalado2.jpeg" alt="" class="ui image medium rounded centered"><br>
+   <img src="sambalado3.jpeg" alt="" class="ui image medium rounded centered">
+</div>
+
+<div id="feedback" style="margin-top: 68px; padding-top: 44px;">
+  <h1 class="ui header center aligned" id='feedback-header'>Umpan Balik</h1>
+
+  <h3 class="ui header" style="margin-left: 206.98;" id='name-header'>Nama</h3>
+  <div class="ui labeled input" style="margin-left: 10px;">
+    <div class="ui label" id='name-label'>
+      Nama
+    </div>
+    <input type="text">
+  </div>
+
+  <h3 class="ui header" style="margin-left: 206.98;" id='review-header'>Ulasan</h3>
+  <div class="ui labeled input" style="margin-left: 10px;">
+    <div class="ui label" id='review-label'>
+      Ulasan
+    </div>
+    <input type="text">
+
+    <button class="ui button primary" style="margin-left: 10px;" id='send-button'>Kirim</button>
+  </div>
+  </div>
+
+  <div id="buybody" style="margin-top: 68px; padding-top: 44px;">
+    <h1 class="ui header center aligned" id='buy-header'>Beli Sekarang</h1>
+
+    <div class="ui two column doubling stackable grid container">
+      <div class="column">
+        <h3 class="ui header">Original</h3>
+        <img src="original1.jpg" alt="" class="ui image medium rounded"><br>
+        <button class="ui button primary" id="buy-original" onclick="buyoriginal()">Beli Sekarang</button>
+      </div>
+      <div class="column">
+        <h3 class="ui header">Sambalado</h3>
+        <img src="sambalado1.jpeg" alt="" class="ui image medium rounded"><br>
+        <button class="ui button primary" id="buy-sambalado" onclick="buysambalado()" style="image-height: 960px;">Beli Sekarang</button>
+      </div>
+    </div>
+  </div>
+
+<body onload="first()">
+</body>
