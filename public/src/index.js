@@ -1,6 +1,7 @@
 let or
 let order_detail
 let order
+let vst
 
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
@@ -56,45 +57,57 @@ db.collection('order_number_generator').doc('numbers')
     .onSnapshot(function(doc) {
       ord = doc.data()
       order = ord['order']
-      order_detail = ord ['orderdetail']
+      order_detail = ord['orderdetail']
     });
+
+var washingtonRef = db.collection('Visit').doc('data');
+
+washingtonRef.update({
+  data: firebase.firestore.FieldValue.increment(1)
+})
 
 function buyoriginalb() {
   let i = 1
   let qty = document.getElementById('originalinput').value;
-  console.log(qty)
-  let jumlahs = ori - qty;
-  console.log(jumlahs)
-  console.log(ori)
-  let alamat = document.getElementById('addressinput').value;
-  let nama = document.getElementById('nameinput').value;
-  let nmr = document.getElementById('numberinput').value;
-  let orderp = order += 1
-  let orderdp = order_detail += 1
+  
+  if (qty > ori.Jumlah) {
+    alert('woy, gk bs beli segitu dong');
+    document.getElementById('stockAbis').classList.remove('hidden')
+  } else {
+    console.log("ori",ori);
+    console.log("oriiii1", ori.Jumlah);
+    let jumlahs = parseInt(ori.Jumlah) - parseInt(qty);
+    console.log(jumlahs)
+    let alamat = document.getElementById('addressinput').value;
+    let nama = document.getElementById('nameinput').value;
+    let nmr = document.getElementById('numberinput').value;
+    let orderp = order += 1
+    let orderdp = order_detail += 1
 
-  db.collection("Stock").doc('original').set({
-    Rasa: "Original",
-    Jumlah: jumlahs
-  })
+    db.collection("Stock").doc('original').set({
+      Rasa: "Original",
+      Jumlah: jumlahs
+    })
 
-  db.collection("order").add({
-    Address: alamat,
-    ID: order,
-    Name: nama,
-    Phone: nmr
-  })
+    db.collection("order").add({
+      Address: alamat,
+      ID: order,
+      Name: nama,
+      Phone: nmr
+    })
 
-  db.collection('order_detail').add({
-    detailid: order,
-    orderid: order,
-    quantity: qty,
-    rasaprojectId: "Original / 1"
-  })
+    db.collection('order_detail').add({
+      detailid: order,
+      orderid: order,
+      quantity: qty,
+      rasaprojectId: "Original / 1"
+    })
 
-  db.collection('order_number_generator').doc('numbers').set({
-    order: orderp,
-    orderdetail: orderdp
-  })
+    db.collection('order_number_generator').doc('numbers').set({
+      order: ordexrp,
+      orderdetail: orderdp
+    })
+  }
 }
 
 // doesn't matter
